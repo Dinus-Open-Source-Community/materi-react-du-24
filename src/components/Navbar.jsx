@@ -44,19 +44,17 @@ const Navbar = () => {
               <Menu className="text-white" size={24} />
             )}
           </div>
-          <ul className="hidden md:flex space-x-4">
+          <div className="hidden md:flex space-x-4">
             {navItems.map((item, index) => (
-              <li key={index}>
-                <a
-                  key={index}
-                  href={item.route}
-                  className="text-white hover:text-gray-400"
-                >
-                  {item.label}
-                </a>
-              </li>
+              <a
+                key={index}
+                href={item.route}
+                className="text-white hover:text-gray-400"
+              >
+                {item.label}
+              </a>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
       {showMenu && (
